@@ -10,7 +10,7 @@
     <string name="update_install">Actualizar</string>
     <string name="update_manual_hint">También puedes descargar el APK manualmente desde %1$s</string>
     <string name="update_manual_open_releases">Abrir GitHub Releases</string>
-    <string name="update_manual_release_url">https://github.com/Helandy/YummyTV/releases/latest</string>
+    <string name="update_manual_release_url">https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest</string>
     <string name="update_downloading">Descargando actualización…</string>
     <string name="update_installing">Instalando…</string>
     <string name="update_error_title">Error de actualización</string>

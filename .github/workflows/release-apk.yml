@@ -1,0 +1,226 @@
+name: Release APK
+
+# Compila el APK, lo deja descargable como artefacto de la ejecución y lo publica
+# en GitHub Releases. Documentación: docs/distribucion.md
+on:
+    workflow_dispatch:
+        inputs:
+            tag:
+                description: 'Etiqueta del release (vacío = se calcula desde gradle.properties)'
+                required: false
+                type: string
+            prerelease:
+                description: 'Marcar como pre-release'
+                required: false
+                type: boolean
+                default: false
+    # Alternativa al workflow_dispatch: no necesita permiso "actions: write".
+    #   gh api -X POST repos/OWNER/REPO/dispatches -f event_type=build-release
+    repository_dispatch:
+        types: [build-release]
+    push:
+        branches:
+            - main
+            - master
+            - 'release/**'
+            - 'arena/**'
+        tags:
+            - 'v*'
+            - 'b*'
+
+permissions:
+    contents: write
+
+concurrency:
+    group: release-apk-${{ github.ref }}
+    cancel-in-progress: false
+
+jobs:
+    release:
+        name: Build and publish APK
+        runs-on: ubuntu-latest
+        timeout-minutes: 60
+
+        env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v5
+
+            -   name: Set up JDK
+                uses: actions/setup-java@v5
+                with:
+                    distribution: temurin
+                    java-version: 21
+
+            -   name: Set up Gradle
+                uses: gradle/actions/setup-gradle@v5
+
+            -   name: Set up Android SDK
+                uses: android-actions/setup-android@v4
+
+            -   name: Install Android SDK platform
+                run: |
+                    compile_sdk=$(grep -m1 '^android-compileSdk' gradle/libs.versions.toml | cut -d'"' -f2)
+                    case "$compile_sdk" in
+                      *.*) platform_version="$compile_sdk" ;;
+                      *)   platform_version="$compile_sdk.0" ;;
+                    esac
+                    echo "compileSdk=$compile_sdk -> platforms;android-$platform_version"
+                    (yes || true) | sdkmanager --licenses >/dev/null
+                    sdkmanager --install "platforms;android-$platform_version" "build-tools;$platform_version.0"
+
+            -   name: Read version
+                id: version
+                run: |
+                    version=$(grep -m1 '^yummytv.versionName=' gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
+                    if [ -z "$version" ]; then echo "No se pudo leer yummytv.versionName"; exit 1; fi
+                    echo "version=$version" >> "$GITHUB_OUTPUT"
+                    if [[ "$version" == *-beta ]]; then
+                      echo "tag=b${version%-beta}" >> "$GITHUB_OUTPUT"
+                      echo "prerelease=true" >> "$GITHUB_OUTPUT"
+                    else
+                      echo "tag=v$version" >> "$GITHUB_OUTPUT"
+                      echo "prerelease=false" >> "$GITHUB_OUTPUT"
+                    fi
+
+            -   name: Build debug and release APKs
+                run: ./gradlew :app:assembleDebug :app:assembleRelease --stacktrace
+
+            -   name: Prepare APKs (and sign release when a keystore is configured)
+                id: apks
+                env:
+                    KEYSTORE_B64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+                    KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+                    KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+                    KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+                run: |
+                    set -euo pipefail
+                    version="${{ steps.version.outputs.version }}"
+                    mkdir -p dist
+
+                    # El APK debug ya viene firmado con la clave debug: siempre es instalable.
+                    debug_apk=$(find app/build/outputs/apk/debug -name '*.apk' -print -quit)
+                    if [ -z "$debug_apk" ]; then echo "No se encontró el APK debug"; exit 1; fi
+                    cp "$debug_apk" "dist/YummyTV-${version}-debug.apk"
+                    primary="dist/YummyTV-${version}-debug.apk"
+
+                    # Si el repositorio tiene un keystore en secretos, publicamos el APK de release
+                    # firmado (mismo applicationId, válido para actualizaciones). Si no, publicamos
+                    # el debug y lo indicamos claramente en las notas del release.
+                    if [ -n "${KEYSTORE_B64:-}" ]; then
+                      echo "$KEYSTORE_B64" | base64 -d > /tmp/release-keystore.p12
+                      sdk_root="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+                      if [ -z "$sdk_root" ]; then echo "No se encontró ANDROID_HOME/ANDROID_SDK_ROOT"; exit 1; fi
+                      apksigner_bin=$(find "$sdk_root/build-tools" -name apksigner -type f | sort | tail -1)
+                      if [ -z "$apksigner_bin" ]; then echo "No se encontró apksigner"; exit 1; fi
+                      build_tools=$(dirname "$apksigner_bin")
+                      unsigned=$(find app/build/outputs/apk/release -name '*.apk' -print -quit)
+                      if [ -z "$unsigned" ]; then echo "No se encontró el APK de release"; exit 1; fi
+
+                      "$build_tools/zipalign" -p -f 4 "$unsigned" /tmp/aligned.apk
+                      "$build_tools/apksigner" sign \
+                        --ks /tmp/release-keystore.p12 --ks-type PKCS12 \
+                        --ks-pass "pass:${KEYSTORE_PASSWORD:-}" \
+                        --ks-key-alias "${KEY_ALIAS:-yummytv}" \
+                        --key-pass "pass:${KEY_PASSWORD:-${KEYSTORE_PASSWORD:-}}" \
+                        --out "dist/YummyTV-${version}.apk" /tmp/aligned.apk
+                      "$build_tools/apksigner" verify "dist/YummyTV-${version}.apk"
+                      primary="dist/YummyTV-${version}.apk"
+                      echo "signed=true" >> "$GITHUB_OUTPUT"
+                    else
+                      echo "signed=false" >> "$GITHUB_OUTPUT"
+                    fi
+
+                    echo "primary=$primary" >> "$GITHUB_OUTPUT"
+                    (cd dist && sha256sum *.apk > SHA256SUMS.txt)
+                    ls -lh dist
+
+            -   name: Upload APK as workflow artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: yummytv-apk-${{ steps.version.outputs.version }}
+                    path: dist/*.apk
+                    retention-days: 90
+                    if-no-files-found: error
+
+            -   name: Publish GitHub Release
+                id: publish
+                env:
+                    VERSION: ${{ steps.version.outputs.version }}
+                    COMPUTED_TAG: ${{ steps.version.outputs.tag }}
+                    COMPUTED_PRERELEASE: ${{ steps.version.outputs.prerelease }}
+                    INPUT_TAG: ${{ inputs.tag }}
+                    INPUT_PRERELEASE: ${{ inputs.prerelease }}
+                    PRIMARY: ${{ steps.apks.outputs.primary }}
+                    SIGNED: ${{ steps.apks.outputs.signed }}
+                    SHA: ${{ github.sha }}
+                    RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+                run: |
+                    set -euo pipefail
+                    tag="${INPUT_TAG:-$COMPUTED_TAG}"
+                    apk_name=$(basename "$PRIMARY")
+
+                    if [ "$SIGNED" = "true" ]; then
+                      signing_note="APK de release firmado (instalable y actualizable)."
+                    else
+                      signing_note="APK **debug** firmado con la clave debug de CI: es instalable, pero usa el id \`su.afk.yummy.tv.debug\` y no sirve para actualizar una instalación anterior. Para publicar un APK de release firmado, configura los secretos descritos en \`docs/distribucion.md\`."
+                    fi
+
+                    cat > /tmp/notes.md <<EOF
+                    ## YummyTV $VERSION
+
+                    Compilación automática generada por el workflow **Release APK**.
+
+                    - Commit: \`$SHA\`
+                    - $signing_note
+                    - Comprobante: \`SHA256SUMS.txt\`
+
+                    ### Descargar
+
+                    1. Aquí mismo, en **Assets**: \`$apk_name\`.
+                    2. Como artefacto de la ejecución de Actions ([descargar APK]($RUN_URL#artifacts)), conservado 90 días.
+
+                    ### Instalar
+
+                    Descarga el APK en el móvil o TV Box, ábrelo y permite la instalación desde orígenes desconocidos.
+                    En Android TV puedes pasarlo con [LocalSend](https://localsend.org/).
+                    EOF
+
+                    prerelease_flag=()
+                    if [ "${INPUT_PRERELEASE:-false}" = "true" ] || [ "$COMPUTED_PRERELEASE" = "true" ]; then
+                      prerelease_flag=(--prerelease)
+                    fi
+
+                    if gh release view "$tag" >/dev/null 2>&1; then
+                      # Un solo APK por release: el actualizador de la app toma el primer asset .apk.
+                      old_assets=$(gh release view "$tag" --json assets --jq '.assets[].name' \
+                        | grep -i '\.apk$' || true)
+                      for old in $old_assets; do
+                        gh release delete-asset "$tag" "$old" --yes || true
+                      done
+                      gh release upload "$tag" "$PRIMARY" dist/SHA256SUMS.txt --clobber
+                      gh release edit "$tag" --notes-file /tmp/notes.md
+                      echo "Release $tag actualizado"
+                    else
+                      gh release create "$tag" "$PRIMARY" dist/SHA256SUMS.txt \
+                        --target "$SHA" \
+                        --title "YummyTV $VERSION" \
+                        --notes-file /tmp/notes.md \
+                        "${prerelease_flag[@]}"
+                      echo "Release $tag creado"
+                    fi
+
+                    release_url=$(gh release view "$tag" --json url --jq '.url')
+                    {
+                      echo "## APK publicado"
+                      echo ""
+                      echo "| | |"
+                      echo "|---|---|"
+                      echo "| Release | [$tag]($release_url) |"
+                      echo "| APK | \`$apk_name\` |"
+                      echo "| Artefacto | [ejecución de Actions]($RUN_URL#artifacts) |"
+                      echo "| Firmado con keystore | $SIGNED |"
+                    } >> "$GITHUB_STEP_SUMMARY"
+                    echo "url=$release_url" >> "$GITHUB_OUTPUT"
