@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="update_install_unknown_sources_required">Permite instalar apps desde este origen y vuelve a iniciar la actualización</string>
+    <string name="update_install_confirmation_error">No se pudo abrir la confirmación de instalación</string>
+    <string name="update_install_error_aborted">Instalación cancelada</string>
+    <string name="update_install_error_blocked">El sistema bloqueó la instalación</string>
+    <string name="update_install_error_conflict">Conflicto con el paquete instalado</string>
+    <string name="update_install_error_incompatible">El APK no es compatible con este dispositivo</string>
+    <string name="update_install_error_invalid">Archivo APK no válido</string>
+    <string name="update_install_error_storage">No hay espacio suficiente para instalar</string>
+    <string name="update_install_error_unknown">No se pudo instalar la actualización</string>
+    <string name="update_download_notification_channel">Actualización de la app</string>
+    <string name="update_download_notification_title">Descargando actualización</string>
+    <string name="update_download_notification_progress">Descargado %1$d %%</string>
+    <string name="update_download_notification_cancel">Cancelar</string>
+    <string name="update_download_notification_done">Actualización descargada. Toca para instalar</string>
+    <string name="update_download_error_http">No se pudo descargar la actualización: HTTP %1$d</string>
+    <string name="update_download_error_incomplete">El archivo de actualización se descargó de forma incompleta: %1$d de %2$d bytes</string>
+    <string name="update_download_error_not_apk">El archivo de actualización descargado no es un APK</string>
+    <string name="update_download_error_save">No se pudo guardar el archivo de actualización</string>
+    <string name="update_download_error_unknown">No se pudo descargar la actualización</string>
+</resources>

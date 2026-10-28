@@ -1,0 +1,14 @@
+<resources>
+    <string name="site_pages_title">Páginas del sitio</string>
+    <string name="site_page_faq">Preguntas frecuentes del sitio</string>
+    <string name="site_page_about">Sobre el sitio</string>
+    <string name="site_page_rules">Normas del sitio</string>
+    <string name="site_page_review_rules">Normas de las reseñas</string>
+    <string name="site_page_collections_rules">Normas de las colecciones</string>
+    <string name="site_page_post_rules">Normas de las publicaciones</string>
+    <string name="site_page_edit_rules">Normas de edición</string>
+    <string name="site_page_privacy">Privacidad</string>
+    <string name="site_page_copyright">Derechos de autor</string>
+    <string name="site_page_help">¿Quieres ayudar?</string>
+    <string name="site_page_fallback">La página del sitio no está disponible temporalmente. El servidor no devolvió contenido legible.</string>
+</resources>

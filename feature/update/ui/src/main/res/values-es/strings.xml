@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="update_available_title">Actualización disponible</string>
+    <string name="update_required_title">Actualización obligatoria</string>
+    <string name="update_version">Hay una nueva versión %1$s disponible</string>
+    <string name="update_version_beta">Hay una nueva versión beta %1$s disponible</string>
+    <string name="update_required_message">Tu versión ya no es compatible. Actualiza la app para continuar.</string>
+    <string name="update_changelog_title">Novedades:</string>
+    <string name="update_later">Ahora no</string>
+    <string name="update_install">Actualizar</string>
+    <string name="update_manual_hint">También puedes descargar el APK manualmente desde %1$s</string>
+    <string name="update_manual_open_releases">Abrir GitHub Releases</string>
+    <string name="update_manual_release_url">https://github.com/Helandy/YummyTV/releases/latest</string>
+    <string name="update_downloading">Descargando actualización…</string>
+    <string name="update_installing">Instalando…</string>
+    <string name="update_error_title">Error de actualización</string>
+    <plurals name="update_updates_count">
+        <item quantity="one">%1$d actualización desde tu versión</item>
+        <item quantity="other">%1$d actualizaciones desde tu versión</item>
+    </plurals>
+</resources>

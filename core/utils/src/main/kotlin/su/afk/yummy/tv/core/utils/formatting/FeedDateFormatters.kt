@@ -6,19 +6,19 @@ import java.util.Locale
 import java.util.TimeZone
 
 /**
- * Единый формат даты для лент (рецензии, посты, видео блогеров): «день месяц, часы:минуты».
- * Вход — Unix-время в секундах. Единый источник, чтобы не плодить inline-[java.text.DateFormat] по фичам.
+ * Formato de fecha único para los feeds (reseñas, publicaciones, vídeos de blogueros): «día mes, horas:minutos».
+ * La entrada es tiempo Unix en segundos. Fuente única para no duplicar [java.text.DateFormat] en cada feature.
  */
 fun Long.formatFeedDateTime(): String =
     SimpleDateFormat("d MMMM, HH:mm", Locale.getDefault()).format(Date(this * 1_000L))
 
 /**
- * Дата выхода серии для карточек: «3 окт» или «3 окт, 17:30», если время известно. Месяц короткий —
- * подпись живёт в узкой карточке. Вход — Unix-время в секундах.
+ * Fecha de estreno del episodio para las tarjetas: «3 oct» o «3 oct, 17:30» si se conoce la hora.
+ * El mes es abreviado: la etiqueta vive en una tarjeta estrecha. La entrada es tiempo Unix en segundos.
  *
- * Ровная полночь UTC означает, что источник знает только день: у yani половина дат в расписании
- * приходит именно так. Такие даты и форматируем в UTC — в локальной зоне западнее Гринвича полночь
- * съезжает на предыдущий день, а время показывать нельзя, оно выглядело бы настоящим (03:00 для MSK).
+ * La medianoche exacta en UTC significa que la fuente solo conoce el día: en yani la mitad de las fechas
+ * del calendario llegan así. Esas fechas se formatean en UTC: en zonas al oeste de Greenwich la medianoche
+ * cae en el día anterior y no se puede mostrar la hora, parecería real (03:00 para MSK).
  */
 fun Long.formatAirDate(): String {
     val dayOnly = this % SECONDS_IN_DAY == 0L
@@ -30,11 +30,16 @@ fun Long.formatAirDate(): String {
 private const val SECONDS_IN_DAY = 24L * 60L * 60L
 
 /**
- * Полная дата комментария: «20 нояб. 2024 в 18:30» для ru, «20 Nov 2024, 18:30» для остальных локалей.
- * Вход — Unix-время в секундах.
+ * Fecha completa del comentario: «20 nov 2024 a las 18:30» para es,
+ * «20 нояб. 2024 в 18:30» para ru y «20 Nov 2024, 18:30» para el resto de locales.
+ * La entrada es tiempo Unix en segundos.
  */
 fun Long.formatCommentDateTime(): String {
     val locale = Locale.getDefault()
-    val pattern = if (locale.language == "ru") "d MMM yyyy 'в' HH:mm" else "d MMM yyyy, HH:mm"
+    val pattern = when (locale.language) {
+        "ru" -> "d MMM yyyy 'в' HH:mm"
+        "es" -> "d MMM yyyy 'a las' HH:mm"
+        else -> "d MMM yyyy, HH:mm"
+    }
     return SimpleDateFormat(pattern, locale).format(Date(this * 1_000L))
 }

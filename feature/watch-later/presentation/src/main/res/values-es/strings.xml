@@ -1,0 +1,6 @@
+<resources>
+    <string name="watch_later_title">Ver más tarde</string>
+    <string name="watch_later_empty">Todavía no hay episodios aplazados</string>
+    <string name="watch_later_episode">Episodio %1$s</string>
+    <string name="watch_later_remove">Quitar de ver más tarde</string>
+</resources>

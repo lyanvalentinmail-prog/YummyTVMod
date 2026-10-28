@@ -1,0 +1,20 @@
+<resources>
+    <string name="posts_auth_required">Inicia sesión para votar</string>
+    <string name="posts_vote_error">No se pudo guardar el voto</string>
+    <string name="posts_load_error">No se pudo cargar la publicación</string>
+    <string name="posts_comments">Comentarios (%1$s)</string>
+    <string name="posts_title">Noticias</string>
+    <string name="posts_publication">Publicación</string>
+    <string name="posts_all">Todas</string>
+    <string name="posts_new">Nuevas</string>
+    <string name="posts_old">Antiguas</string>
+    <string name="posts_best">Mejores</string>
+    <string name="posts_empty">Todavía no hay publicaciones</string>
+    <string name="posts_error">No se pudieron cargar las noticias</string>
+    <string name="posts_related_anime">Anime relacionado</string>
+    <string name="posts_views">%1$s visualizaciones</string>
+    <string name="posts_reactions_title">Valora esta publicación</string>
+    <string name="posts_mobile_detail_placeholder">Selecciona una publicación para leerla aquí</string>
+        <string name="posts_count_thousands">%1$sK</string>
+    <string name="posts_count_millions">%1$sM</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="video_download_notification_channel">Descargas de vídeo</string>
+    <string name="video_download_notification_title">YummyTV</string>
+    <string name="video_download_notification_progress">Episodio %1$s • %2$d %%</string>
+    <string name="video_download_notification_queued">Episodio %1$s • esperando en la cola (%2$d %%)</string>
+    <string name="video_download_notification_paused">Episodio %1$s • pausado al %2$d %%</string>
+    <string name="video_download_notification_pause">Pausar</string>
+    <string name="video_download_notification_resume">Reanudar</string>
+    <string name="video_download_worker_stopped">Descarga detenida. Toca para reiniciarla.</string>
+    <string name="video_download_no_space">No queda espacio libre. Libera espacio e inténtalo de nuevo.</string>
+    <string name="video_export_notification_channel">Exportaciones de vídeo</string>
+    <string name="video_export_notification_title">Exportando el episodio %1$s</string>
+    <string name="video_export_notification_progress">Preparando MP4 • %1$d %%</string>
+    <string name="video_export_error_no_space">No hay espacio interno suficiente para preparar el archivo MP4.</string>
+    <string name="video_export_error_create_file">No se pudo crear un archivo en la carpeta seleccionada.</string>
+    <string name="video_export_error_create_directory">No se pudo crear la carpeta del título dentro de la carpeta seleccionada.</string>
+    <string name="video_export_error_open_file">El almacenamiento seleccionado no está disponible o es de solo lectura.</string>
+    <string name="video_export_error_unknown">No se pudo exportar el episodio. Vuelve a conectar el almacenamiento e inténtalo de nuevo.</string>
+    <string name="video_export_error_directory_read_only">La carpeta seleccionada no permite crear archivos.</string>
+    <string name="video_export_error_directory_unavailable">No hay acceso a la carpeta seleccionada. Elígela de nuevo en los ajustes.</string>
+    <string name="video_export_worker_stopped">La exportación a MP4 se detuvo. Vuelve a conectar el almacenamiento e inténtalo de nuevo.</string>
+    <string name="video_export_selected_directory">Carpeta seleccionada</string>
+</resources>

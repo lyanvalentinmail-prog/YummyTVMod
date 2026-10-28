@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_screen">Todavía no hay nada aquí</string>
+    <string name="notification_permission_explanation">Para ver el progreso de las descargas, permite las notificaciones.</string>
+    <string name="notification_permission_explanation_episode_push">Para recibir avisos de nuevos episodios, permite las notificaciones.</string>
+    <string name="notification_permission_decline">Cancelar</string>
+    <string name="notification_permission_enable">Activar</string>
+    <string name="notification_permission_settings_reminder">Puedes activar las notificaciones más adelante en Ajustes.</string>
+    <string name="notification_permission_changed_mind">He cambiado de opinión, actívalas ahora</string>
+    <string name="notification_permission_ok">Aceptar</string>
+    <string name="error_title_fallback">Error</string>
+    <string name="copy">Copiar</string>
+    <string name="details">Detalles</string>
+    <string name="hide_details">Ocultar detalles</string>
+    <string name="error_http_code">HTTP: %1$s</string>
+    <string name="error_method">Método: %1$s</string>
+    <string name="error_url">URL: %1$s</string>
+    <string name="error_request_id">ID de solicitud: %1$s</string>
+    <string name="error_body">Cuerpo:\n%1$s</string>
+    <string name="offline_banner_message">Sin conexión: se muestran los datos guardados</string>
+    <string name="error_msg_no_connection">Comprueba tu conexión a Internet e inténtalo de nuevo.</string>
+    <string name="error_msg_timeout">El servidor tarda demasiado en responder. Inténtalo de nuevo.</string>
+    <string name="error_msg_generic">Algo ha ido mal. Inténtalo de nuevo.</string>
+    <string name="error_msg_http">Error del servidor (%1$d). Inténtalo más tarde.</string>
+    <string name="common_back">Atrás</string>
+    <string name="common_retry">Reintentar</string>
+    <string name="common_loading">Cargando…</string>
+    <string name="common_close">Cerrar</string>
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_sign_in">Iniciar sesión</string>
+    <string name="common_delete">Eliminar</string>
+    <string name="common_done">Hecho</string>
+    <string name="core_list_status_watching">Viendo</string>
+    <string name="core_season_winter">Invierno</string>
+    <string name="core_season_spring">Primavera</string>
+    <string name="core_season_summer">Verano</string>
+    <string name="core_season_fall">Otoño</string>
+    <string name="core_year_season">%1$s · %2$s</string>
+    <string name="core_list_status_planned">Planeado</string>
+    <string name="core_list_status_completed">Completado</string>
+    <string name="core_list_status_postponed">Aplazado</string>
+    <string name="core_list_status_dropped">Abandonado</string>
+    <plurals name="core_release_in_days">
+        <item quantity="one">Siguiente episodio en %1$d día</item>
+        <item quantity="other">Siguiente episodio en %1$d días</item>
+    </plurals>
+    <plurals name="core_release_in_hours">
+        <item quantity="one">Siguiente episodio en %1$d hora</item>
+        <item quantity="other">Siguiente episodio en %1$d horas</item>
+    </plurals>
+    <plurals name="core_release_in_minutes">
+        <item quantity="one">Siguiente episodio en %1$d minuto</item>
+        <item quantity="other">Siguiente episodio en %1$d minutos</item>
+    </plurals>
+    <string name="core_release_status_ongoing">En emisión</string>
+    <string name="core_release_status_released">Finalizado</string>
+    <string name="core_release_status_announcement">Anunciado</string>
+    <string name="core_title_card_favorite">Favorito</string>
+    <string name="core_title_card_viewer_mark">Tú:</string>
+    <string name="seasonal_prompt_title">Decoración de temporada</string>
+    <string name="seasonal_prompt_halloween">La app está decorada por Halloween: telarañas, calabazas y fantasmas. ¿No lo necesitas? Desactívalo; puedes volver a activarlo en Ajustes → Apariencia → Decoración de temporada.</string>
+    <string name="seasonal_prompt_new_year">La app está decorada por Año Nuevo: guirnalda, nieve y gorros de Papá Noel. ¿No lo necesitas? Desactívalo; puedes volver a activarlo en Ajustes → Apariencia → Decoración de temporada.</string>
+    <string name="seasonal_prompt_disable">Desactivar</string>
+    <string name="seasonal_prompt_keep">Mantener</string>
+</resources>

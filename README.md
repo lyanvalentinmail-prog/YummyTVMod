@@ -5,12 +5,12 @@
 <h1 align="center">YummyTV</h1>
 
 <p align="center">
-  Неофициальный клиент <a href="https://yummyani.me/">YummyAnime</a> для Android TV и Android.<br/>
-  Нативный интерфейс, встроенный плеер, библиотека, подписки и удобное управление с пульта.
+  Cliente no oficial de <a href="https://yummyani.me/">YummyAnime</a> para Android TV y Android.<br/>
+  Interfaz nativa, reproductor integrado, biblioteca, suscripciones y cómodo manejo con el mando a distancia.
 </p>
 
 <p align="center">
-  <a href="README.en.md">English</a> · <a href="README.md">Русский</a>
+  <a href="README.en.md">English</a> · <a href="README.md">Español</a>
 </p>
 
 <p align="center">
@@ -38,47 +38,48 @@
 ---
 
 > [!TIP]
-> 💬 Комьюнити приложения в Telegram: [@etozhesandy_dev](https://t.me/etozhesandy_dev) — новости,
-> обновления и обсуждение.
+> 💬 Comunidad de la app en Telegram: [@etozhesandy_dev](https://t.me/etozhesandy_dev) — noticias,
+> actualizaciones y debate.
 
 > [!IMPORTANT]
-> 💼 В поиске работы: [@Etozhesandy](https://t.me/Etozhesandy) (Android, Compose, Kotlin).
-> С вопросами по программе туда не пишите — для этого есть
+> 💼 En búsqueda de empleo: [@Etozhesandy](https://t.me/Etozhesandy) (Android, Compose, Kotlin).
+> No escribas ahí con dudas sobre la app; para eso están las
 > [Issues](https://github.com/Helandy/YummyTV/issues).
 
-## Что это
+## ¿Qué es?
 
-**YummyTV** — нативное Android-приложение для просмотра аниме с YummyAnime. Проект поддерживает два
-отдельных интерфейса: удобный TV-режим для Android TV / приставок и мобильный режим для смартфонов.
+**YummyTV** es una aplicación Android nativa para ver anime de YummyAnime. El proyecto ofrece dos
+interfaces independientes: un modo TV cómodo para Android TV / TV Box y un modo móvil para smartphones.
 
-Помимо просмотра, встроенного плеера и библиотеки, приложение включает сообщество (комментарии,
-отзывы, новости, блогеры), социальные функции (профили, поиск пользователей, личные сообщения) и
-скачивание серий для офлайн-просмотра.
+Además de la reproducción, el reproductor integrado y la biblioteca, la app incluye comunidad
+(comentarios, reseñas, noticias, blogueros), funciones sociales (perfiles, búsqueda de usuarios,
+mensajes privados) y descarga de episodios para verlos sin conexión.
 
-На телевизоре приложение рассчитано на пульт, D-pad и крупные элементы интерфейса. На телефоне
-доступны нижняя навигация, жесты в плеере и Picture-in-Picture.
+En la televisión la app está pensada para el mando a distancia, el D-pad y los elementos grandes de la
+interfaz. En el móvil están disponibles la navegación inferior, los gestos en el reproductor y
+Picture-in-Picture.
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest"><b>Скачать APK</b></a>
+  <a href="https://github.com/Helandy/YummyTV/releases/latest"><b>Descargar APK</b></a>
   ·
-  <a href="#скриншоты"><b>Скриншоты</b></a>
+  <a href="#capturas"><b>Capturas</b></a>
   ·
-  <a href="#возможности"><b>Возможности</b></a>
+  <a href="#funciones"><b>Funciones</b></a>
   ·
-  <a href="#для-разработчиков"><b>Для разработчиков</b></a>
+  <a href="#para-desarrolladores"><b>Para desarrolladores</b></a>
 </p>
 
 ---
 
-## Скриншоты
+## Capturas
 
 ### Android TV
 
 <table>
   <tr>
-    <td align="center"><b>Главная</b></td>
-    <td align="center"><b>Страница тайтла</b></td>
-    <td align="center"><b>Топ</b></td>
+    <td align="center"><b>Inicio</b></td>
+    <td align="center"><b>Página del título</b></td>
+    <td align="center"><b>Top</b></td>
   </tr>
   <tr>
     <td><img src="docs/screenshots/tv/home.webp" width="320" alt="TV home screen" /></td>
@@ -86,9 +87,9 @@
     <td><img src="docs/screenshots/tv/top.webp" width="320" alt="TV top screen" /></td>
   </tr>
   <tr>
-    <td align="center"><b>Серии</b></td>
-    <td align="center"><b>Балансеры</b></td>
-    <td align="center"><b>Порядок просмотра</b></td>
+    <td align="center"><b>Episodios</b></td>
+    <td align="center"><b>Balanceadores</b></td>
+    <td align="center"><b>Orden de visualización</b></td>
   </tr>
   <tr>
     <td><img src="docs/screenshots/tv/episodes.webp" width="320" alt="TV episodes screen" /></td>
@@ -98,7 +99,7 @@
 </table>
 
 <p align="center">
-  <b>Плеер</b><br/>
+  <b>Reproductor</b><br/>
   <img src="docs/screenshots/tv/player.webp" width="640" alt="TV player screen" />
 </p>
 
@@ -106,10 +107,10 @@
 
 <table>
   <tr>
-    <td align="center"><b>Главная</b></td>
-    <td align="center"><b>Страница тайтла</b></td>
-    <td align="center"><b>Топ</b></td>
-    <td align="center"><b>Библиотека</b></td>
+    <td align="center"><b>Inicio</b></td>
+    <td align="center"><b>Página del título</b></td>
+    <td align="center"><b>Top</b></td>
+    <td align="center"><b>Biblioteca</b></td>
   </tr>
   <tr>
     <td><img src="docs/screenshots/mobile/home.webp" width="210" alt="Mobile home screen" /></td>
@@ -118,10 +119,10 @@
     <td><img src="docs/screenshots/mobile/library.webp" width="210" alt="Mobile library screen" /></td>
   </tr>
   <tr>
-    <td align="center"><b>Серии</b></td>
-    <td align="center"><b>Загрузки</b></td>
-    <td align="center"><b>Профиль</b></td>
-    <td align="center"><b>Балансеры</b></td>
+    <td align="center"><b>Episodios</b></td>
+    <td align="center"><b>Descargas</b></td>
+    <td align="center"><b>Perfil</b></td>
+    <td align="center"><b>Balanceadores</b></td>
   </tr>
   <tr>
     <td><img src="docs/screenshots/mobile/episodes.webp" width="210" alt="Mobile episodes screen" /></td>
@@ -132,66 +133,67 @@
 </table>
 
 <p align="center">
-  <b>Плеер</b><br/>
+  <b>Reproductor</b><br/>
   <img src="docs/screenshots/mobile/player.webp" width="640" alt="Mobile player screen" />
 </p>
 
 ---
 
-## Возможности
+## Funciones
 
-### Интерфейс
+### Interfaz
 
-- 📺 Отдельные интерфейсы для Android TV и Android Mobile.
-- 🎮 Навигация с пульта, D-pad и сенсорного экрана.
-- 🏠 Главная страница с подборками и быстрым продолжением просмотра.
-- 🔎 Поиск по каталогу с фильтрами (жанр, тип, статус, год, сезон, рейтинг, сортировка), а также по
-  студии и режиссёру.
-- 🏆 Топ сериалов и фильмов, расписание выхода серий.
-- 🖼️ Просмотр постеров и скриншотов внутри приложения.
+- 📺 Interfaces independientes para Android TV y Android Mobile.
+- 🎮 Navegación con mando a distancia, D-pad y pantalla táctil.
+- 🏠 Página de inicio con selecciones y acceso rápido para seguir viendo.
+- 🔎 Búsqueda en el catálogo con filtros (género, tipo, estado, año, temporada, valoración, orden), así
+  como por estudio y director.
+- 🏆 Top de series y películas, calendario de estreno de episodios.
+- 🖼️ Visualización de pósters y capturas dentro de la app.
 
-### Библиотека и аккаунт
+### Biblioteca y cuenta
 
-- 🔐 Авторизация в аккаунте YummyAnime.
-- 📚 Библиотека: продолжить просмотр, любимые, смотрю, в планах, просмотрено, отложено и брошено.
-- 🔔 Подписки на новые серии выбранных озвучек с предложением подписаться на выходящие тайтлы.
-- ⭐ Избранное, пользовательские списки и оценки.
-- 📄 Страница тайтла: описание, рейтинги, серии с названиями, трейлеры, похожие, порядок просмотра,
-  скриншоты, коллекции и таймер до выхода следующей серии.
+- 🔐 Inicio de sesión en la cuenta de YummyAnime.
+- 📚 Biblioteca: seguir viendo, favoritos, viendo, planeados, completados, aplazados y abandonados.
+- 🔔 Suscripciones a nuevos episodios de las voces elegidas, con sugerencia de suscribirse a los títulos
+  en emisión.
+- ⭐ Favoritos, listas personalizadas y valoraciones.
+- 📄 Página del título: descripción, valoraciones, episodios con nombres, tráilers, similares, orden de
+  visualización, capturas, colecciones y cuenta atrás hasta el siguiente episodio.
 
-### Сообщество и социальное
+### Comunidad y funciones sociales
 
-- 💬 Комментарии с ответами, сортировкой, голосованием и скрытием спойлеров.
-- 📝 Отзывы на тайтлы с оценками, реакциями и статусом модерации.
-- 📰 Новости и публикации сайта, а также видео блогеров с подписками.
-- 👤 Профили пользователей, поиск, друзья и личные сообщения (на мобильных устройствах).
+- 💬 Comentarios con respuestas, ordenación, votos y ocultación de spoilers.
+- 📝 Reseñas de títulos con valoraciones, reacciones y estado de moderación.
+- 📰 Noticias y publicaciones del sitio, además de vídeos de blogueros con suscripciones.
+- 👤 Perfiles de usuarios, búsqueda, amigos y mensajes privados (en dispositivos móviles).
 
-### Скачивание и офлайн
+### Descargas y modo sin conexión
 
-- ⬇️ Скачивание серий для офлайна, менеджер загрузок и экспорт в MP4 (на мобильных).
+- ⬇️ Descarga de episodios para verlos sin conexión, gestor de descargas y exportación a MP4 (en móviles).
 
-### Плеер
+### Reproductor
 
-Встроенный плеер на **Media3 / ExoPlayer** поддерживает:
+El reproductor integrado basado en **Media3 / ExoPlayer** permite:
 
-- выбор качества, озвучки и балансера (Kodik, Aksor, Alloha, CVH, VK, Rutube, Sibnet, Zedfilm,
+- elegir la calidad, la voz y el balanceador (Kodik, Aksor, Alloha, CVH, VK, Rutube, Sibnet, Zedfilm,
   Aniboom, Anistar, Amedia, AniLibria, 4K);
-- скорость, масштаб и зум, автопропуск опенинга/эндинга;
-- переход между сериями и автовоспроизведение следующей;
-- жесты на мобильных (яркость, громкость, перемотка, зум) и управление мышью на TV;
-- Picture-in-Picture, воспроизведение локальных файлов и предложение оценить тайтл.
+- velocidad, escala y zoom, salto automático del opening/ending;
+- pasar de un episodio a otro y reproducir automáticamente el siguiente;
+- gestos en móviles (brillo, volumen, avance rápido, zoom) y control con ratón en TV;
+- Picture-in-Picture, reproducción de archivos locales y sugerencia para valorar el título.
 
-### Настройки и интеграции
+### Ajustes e integraciones
 
-- 🎨 Темы оформления и режим фона (светлый / тёмный / системный).
-- 🧩 Размеры карточек, качество постеров, язык контента.
-- 🏡 TV Home (Preview Channel, Watch Next), FAQ и обновления через GitHub Releases.
+- 🎨 Temas y modo de fondo (claro / oscuro / sistema).
+- 🧩 Tamaño de las tarjetas, calidad de los pósters e idioma del contenido.
+- 🏡 TV Home (Preview Channel, Watch Next), preguntas frecuentes y actualizaciones desde GitHub Releases.
 
 ---
 
-## Скачать
+## Descargar
 
-Последняя версия доступна в разделе **GitHub Releases**:
+La última versión está disponible en **GitHub Releases**:
 
 <p align="center">
   <a href="https://github.com/Helandy/YummyTV/releases/latest">
@@ -199,61 +201,62 @@
   </a>
 </p>
 
-Скачай APK, передай его на Android TV, приставку или Android-устройство и открой файл для установки.
+Descarga el APK, pásalo a tu Android TV, TV Box o dispositivo Android y abre el archivo para instalarlo.
 
-### Как установить на Android TV
+### Cómo instalar en Android TV
 
-Самый простой способ передать APK на телевизор — через [LocalSend](https://localsend.org/):
+La forma más sencilla de pasar el APK a la televisión es con [LocalSend](https://localsend.org/):
 
-1. Установи LocalSend на телефон или компьютер.
-2. Установи LocalSend на Android TV.
-3. Подключи оба устройства к одной Wi-Fi сети.
-4. Отправь APK на телевизор.
-5. Открой APK на TV и разреши установку из этого источника, если Android попросит подтверждение.
-
----
-
-## Для разработчиков
-
-Проект построен на Kotlin и модульной архитектуре.
-
-### Структура
-
-- `core/*` — общие подсистемы: навигация, дизайн-система, сеть, хранилище, настройки, обновления,
-  deep links, аналитика и TV-интеграции.
-- `feature/*` — пользовательские сценарии: main, home, search, top, library, details, player,
-  settings, account, collection, schedule, а также comments, reviews, posts, bloggers, messages,
-  video-download, faq, pages, watching и commonScreen.
-- `ui-tv` и `ui-mobile` — отдельные UI-модули для телевизора и мобильных устройств.
-
-## Ограничения
-
-YummyTV зависит от доступности YummyAnime и сторонних видеобалансеров. Если сайт, API, плеер или
-источник временно недоступны, часть функций или воспроизведение видео могут не работать.
-
-Для пользователей за пределами СНГ часть видеобалансеров может быть недоступна из-за региональных
-ограничений или блокировок IP-адресов.
+1. Instala LocalSend en el móvil o en el ordenador.
+2. Instala LocalSend en el Android TV.
+3. Conecta ambos dispositivos a la misma red Wi-Fi.
+4. Envía el APK a la televisión.
+5. Abre el APK en la TV y permite la instalación desde ese origen si Android te lo pide.
 
 ---
 
-## ☕ Поддержать проект
+## Para desarrolladores
 
-YummyTV разрабатывается и поддерживается независимо.
+El proyecto está construido en Kotlin con una arquitectura modular.
 
-Если вам нравится приложение и вы хотите помочь его дальнейшему развитию:
+### Estructura
 
-[![Поддержать на Boosty](https://img.shields.io/badge/Поддержать%20на-Boosty-orange?style=for-the-badge)](https://boosty.to/etozhesandy)
+- `core/*` — subsistemas comunes: navegación, sistema de diseño, red, almacenamiento, ajustes,
+  actualizaciones, deep links, analítica e integraciones con TV.
+- `feature/*` — escenarios de usuario: main, home, search, top, library, details, player, settings,
+  account, collection, schedule, además de comments, reviews, posts, bloggers, messages,
+  video-download, faq, pages, watching y commonScreen.
+- `ui-tv` y `ui-mobile` — módulos de UI independientes para televisión y móviles.
 
-Также можно поддержать проект бесплатно:
+## Limitaciones
 
-* ⭐ **Поставить Star репозиторию** — это помогает другим узнать о проекте
-* 🐞 **Сообщить об ошибке** через [Issues](https://github.com/Helandy/YummyTV/issues)
-* 💡 **Предложить улучшение** через [Issues](https://github.com/Helandy/YummyTV/issues)
+YummyTV depende de la disponibilidad de YummyAnime y de balanceadores de vídeo de terceros. Si el sitio,
+la API, el reproductor o una fuente no están disponibles temporalmente, algunas funciones o la
+reproducción de vídeo pueden dejar de funcionar.
+
+Para los usuarios fuera de la CEI, algunos balanceadores de vídeo pueden no estar disponibles debido a
+restricciones regionales o bloqueos de direcciones IP.
 
 ---
 
-## Disclaimer
+## ☕ Apoyar el proyecto
 
-- YummyTV — неофициальный клиент YummyAnime.
-- Приложение не хранит и не распространяет контент.
-- Все права принадлежат их владельцам.
+YummyTV se desarrolla y se mantiene de forma independiente.
+
+Si te gusta la app y quieres ayudar a que siga creciendo:
+
+[![Apoyar en Boosty](https://img.shields.io/badge/Apoyar%20en-Boosty-orange?style=for-the-badge)](https://boosty.to/etozhesandy)
+
+También puedes apoyar el proyecto gratis:
+
+* ⭐ **Dar una estrella al repositorio**: ayuda a que otros conozcan el proyecto
+* 🐞 **Informar de un error** mediante [Issues](https://github.com/Helandy/YummyTV/issues)
+* 💡 **Proponer una mejora** mediante [Issues](https://github.com/Helandy/YummyTV/issues)
+
+---
+
+## Descargo de responsabilidad
+
+- YummyTV es un cliente no oficial de YummyAnime.
+- La app no almacena ni distribuye contenido.
+- Todos los derechos pertenecen a sus respectivos propietarios.
