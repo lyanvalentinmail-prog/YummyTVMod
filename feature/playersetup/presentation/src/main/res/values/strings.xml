@@ -22,6 +22,7 @@
     <string name="player_setup_language_russian">Русский</string>
     <string name="player_setup_language_english">English</string>
     <string name="player_setup_language_ukrainian">Українська</string>
+    <string name="player_setup_language_spanish">Español</string>
     <string name="player_setup_mobile_quality_best_hint">Use the highest stream quality</string>
         <string name="player_setup_mobile_section_timings">Openings and endings</string>
     <string name="player_setup_mobile_section_episodes">Episodes</string>

@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="README.md">Русский</a> · <a href="README.en.md">English</a>
+  <a href="README.md">Español</a> · <a href="README.en.md">English</a>
 </p>
 
 <p align="center">

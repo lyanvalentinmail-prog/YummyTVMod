@@ -19,6 +19,7 @@ internal fun YaniContentLanguage.setupLabel(): String = stringResource(
         YaniContentLanguage.RUSSIAN -> R.string.player_setup_language_russian
         YaniContentLanguage.ENGLISH -> R.string.player_setup_language_english
         YaniContentLanguage.UKRAINIAN -> R.string.player_setup_language_ukrainian
+        YaniContentLanguage.SPANISH -> R.string.player_setup_language_spanish
     },
 )
 

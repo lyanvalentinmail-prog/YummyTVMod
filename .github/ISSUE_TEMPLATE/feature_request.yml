@@ -1,50 +1,50 @@
-name: "💡 Предложение"
-description: "Идея новой возможности или улучшения"
-title: "[Идея]: "
+name: "💡 Sugerencia"
+description: "Idea para una nueva función o mejora"
+title: "[Idea]: "
 labels: [ "enhancement" ]
 body:
     -   type: checkboxes
         id: preflight
         attributes:
-            label: Перед отправкой
+            label: Antes de enviar
             options:
-                -   label: Я поискал среди открытых issue и не нашёл похожего предложения
+                -   label: He buscado entre los issues abiertos y no he encontrado una sugerencia parecida
                     required: true
 
     -   type: dropdown
         id: surface
         attributes:
-            label: Где это нужно
+            label: Dónde se necesita
             options:
                 - Android TV
-                - Мобильный интерфейс
-                - Оба
+                - Interfaz móvil
+                - Ambas
         validations:
             required: true
 
     -   type: textarea
         id: problem
         attributes:
-            label: Какую задачу это решает
-            description: Что сейчас неудобно или чего не хватает
+            label: Qué problema resuelve
+            description: Qué resulta incómodo ahora o qué falta
         validations:
             required: true
 
     -   type: textarea
         id: solution
         attributes:
-            label: Как это должно работать
+            label: Cómo debería funcionar
         validations:
             required: true
 
     -   type: textarea
         id: alternatives
         attributes:
-            label: Альтернативы
-            description: Как ты обходишься сейчас, какие ещё варианты рассматривал
+            label: Alternativas
+            description: Cómo lo solucionas ahora y qué otras opciones has considerado
 
     -   type: textarea
         id: extra
         attributes:
-            label: Скриншоты и примеры
-            description: Например, как похожее сделано в других приложениях
+            label: Capturas y ejemplos
+            description: Por ejemplo, cómo se hace en otras apps

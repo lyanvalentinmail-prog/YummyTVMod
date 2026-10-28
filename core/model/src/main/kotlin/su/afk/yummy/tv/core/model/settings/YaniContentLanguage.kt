@@ -4,10 +4,11 @@ enum class YaniContentLanguage(val apiCode: String) {
     RUSSIAN("ru"),
     ENGLISH("en"),
     UKRAINIAN("uk"),
+    SPANISH("es"),
     ;
 
     companion object {
-        val DEFAULT: YaniContentLanguage = RUSSIAN
+        val DEFAULT: YaniContentLanguage = SPANISH
 
         fun fromPreferenceValue(value: String?): YaniContentLanguage? {
             if (value.isNullOrBlank()) return null

@@ -1,19 +1,19 @@
-name: "▶️ Видео не играет / проблема с балансером"
-description: "Ошибка воспроизведения, вечная загрузка, чёрный экран, нет озвучки или качества"
-title: "[Видео]: "
+name: "▶️ El vídeo no se reproduce / problema con el balanceador"
+description: "Error de reproducción, carga infinita, pantalla negra, sin voz o sin calidad"
+title: "[Vídeo]: "
 labels: [ "bug" ]
 body:
     -   type: markdown
         attributes:
             value: |
-                YummyTV зависит от доступности YummyAnime и сторонних видеобалансеров.
-                Если сайт, API или источник временно недоступны, воспроизведение может не работать.
-                За пределами СНГ часть балансеров блокируется по IP-адресу.
+                YummyTV depende de la disponibilidad de YummyAnime y de balanceadores de vídeo de terceros.
+                Si el sitio, la API o una fuente no están disponibles temporalmente, la reproducción puede fallar.
+                Fuera de la CEI, algunos balanceadores se bloquean por dirección IP.
 
     -   type: input
         id: version
         attributes:
-            label: Версия приложения
+            label: Versión de la app
             placeholder: "1.23"
         validations:
             required: true
@@ -21,18 +21,18 @@ body:
     -   type: dropdown
         id: surface
         attributes:
-            label: Интерфейс
+            label: Interfaz
             options:
-                - Android TV / ТВ-приставка
-                - Телефон / планшет
-                - Оба
+                - Android TV / TV Box
+                - Móvil / tableta
+                - Ambas
         validations:
             required: true
 
     -   type: input
         id: device
         attributes:
-            label: Устройство и версия Android
+            label: Dispositivo y versión de Android
             placeholder: "Xiaomi Mi Box S, Android 9"
         validations:
             required: true
@@ -40,21 +40,21 @@ body:
     -   type: input
         id: title-episode
         attributes:
-            label: Тайтл и серия
-            placeholder: "Naruto, 12 серия"
+            label: Título y episodio
+            placeholder: "Naruto, episodio 12"
         validations:
             required: true
 
     -   type: input
         id: dubbing
         attributes:
-            label: Озвучка
+            label: Voz
             placeholder: "AniLibria"
 
     -   type: dropdown
         id: balancer
         attributes:
-            label: Балансер
+            label: Balanceador
             multiple: true
             options:
                 - Kodik
@@ -65,45 +65,45 @@ body:
                 - Rutube
                 - Sibnet
                 - Zedfilm
-                - Не знаю / все сразу
+                - No lo sé / todos a la vez
         validations:
             required: true
 
     -   type: dropdown
         id: works-on-site
         attributes:
-            label: Играет ли эта серия на сайте yummyani.me в браузере
+            label: ¿Se reproduce este episodio en yummyani.me desde el navegador?
             options:
-                - Да
-                - Нет
-                - Не проверял
+                - Sí
+                - No
+                - No lo he comprobado
         validations:
             required: true
 
     -   type: input
         id: region
         attributes:
-            label: Страна / регион
-            placeholder: "Россия"
+            label: País / región
+            placeholder: "España"
 
     -   type: dropdown
         id: vpn
         attributes:
             label: VPN
             options:
-                - Без VPN
-                - С VPN
+                - Sin VPN
+                - Con VPN
 
     -   type: textarea
         id: what-happens
         attributes:
-            label: Что видно на экране
-            description: Текст ошибки, бесконечная загрузка, чёрный экран, звук без картинки и т.п.
+            label: Qué se ve en pantalla
+            description: Texto del error, carga infinita, pantalla negra, sonido sin imagen, etc.
         validations:
             required: true
 
     -   type: textarea
         id: extra
         attributes:
-            label: Логи, скриншоты, видео
-            description: Файлы можно просто перетащить в это поле
+            label: Registros, capturas, vídeos
+            description: Puedes arrastrar los archivos directamente a este campo

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">YummyTV</string>
+    <string name="search_hint">Buscar anime</string>
+    <string name="search_settings_description">Buscar en el catálogo de YummyTV</string>
+    <string name="interface_mode_title">Elige la interfaz</string>
+    <string name="interface_mode_message">Puedes elegir la interfaz que mejor funcione en este dispositivo.</string>
+    <string name="interface_mode_tv">Interfaz de TV</string>
+    <string name="interface_mode_tv_hint">Controles grandes y navegación cómoda con el mando a distancia</string>
+    <string name="interface_mode_mobile">Interfaz móvil</string>
+    <string name="interface_mode_mobile_hint">Diseño compacto optimizado para el control táctil</string>
+    <string name="episode_push_notification_channel">Nuevos episodios</string>
+    <string name="episode_push_action_watch">Ver</string>
+    <string name="episode_push_action_details">Detalles</string>
+    <string name="shortcut_search">Buscar</string>
+    <string name="shortcut_downloads">Descargas</string>
+    <string name="shortcut_continue_long">Continuar: %1$s</string>
+    <string name="widget_continue_watching_title">Seguir viendo</string>
+    <string name="widget_continue_watching_description">Títulos recientes: toca para reanudar la reproducción</string>
+    <string name="widget_continue_watching_empty">Aquí aparecerá lo que estés viendo</string>
+    <string name="widget_episode">Episodio</string>
+    <string name="widget_episode_number">Episodio %1$s</string>
+</resources>

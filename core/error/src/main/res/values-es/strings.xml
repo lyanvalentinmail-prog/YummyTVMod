@@ -1,0 +1,38 @@
+<resources>
+
+    <string name="err_title_generic">Error</string>
+    <string name="err_msg_generic">Algo ha ido mal. Inténtalo de nuevo.</string>
+
+    <string name="err_title_no_connection">Sin conexión</string>
+    <string name="err_msg_no_connection">Comprueba tu conexión a Internet e inténtalo de nuevo.</string>
+
+    <string name="err_title_timeout">Tiempo de espera agotado</string>
+    <string name="err_msg_timeout">El servidor tarda demasiado en responder. Inténtalo de nuevo.</string>
+
+    <string name="err_title_unauthorized">No autorizado</string>
+    <string name="err_msg_unauthorized">Inicia sesión de nuevo.</string>
+
+    <string name="err_title_forbidden">Acceso denegado</string>
+    <string name="err_msg_forbidden">No tienes permiso para realizar esta acción.</string>
+
+    <string name="err_title_not_found">No encontrado</string>
+    <string name="err_msg_not_found">No se encontró el recurso solicitado.</string>
+
+    <string name="err_title_too_many_requests">Demasiadas solicitudes</string>
+    <string name="err_msg_too_many_requests">El servidor está limitando tus solicitudes. Espera e inténtalo de nuevo.</string>
+
+    <string name="err_title_server_error">Error del servidor</string>
+    <string name="err_msg_server_error">El servidor ha tenido un error. Inténtalo más tarde.</string>
+
+    <string name="err_title_bad_gateway_502">Puerta de enlace incorrecta (502)</string>
+    <string name="err_msg_bad_gateway_502">El servidor devolvió el error 502. Inténtalo más tarde.</string>
+
+    <string name="err_title_service_unavailable_503">Servicio no disponible (503)</string>
+    <string name="err_msg_service_unavailable_503">El servicio no está disponible temporalmente. Inténtalo más tarde.</string>
+
+    <string name="err_title_gateway_timeout_504">Tiempo de espera de la puerta de enlace (504)</string>
+    <string name="err_msg_gateway_timeout_504">El servidor no respondió a tiempo. Inténtalo más tarde.</string>
+
+    <string name="err_title_http_generic">Error HTTP (%1$d)</string>
+    <string name="err_msg_http_generic">La solicitud ha fallado. Inténtalo de nuevo.</string>
+</resources>

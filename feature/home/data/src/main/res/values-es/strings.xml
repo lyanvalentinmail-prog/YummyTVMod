@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_section_new">Nuevos episodios</string>
+    <string name="home_section_new_titles">Nuevos títulos</string>
+    <string name="home_section_announcements">Próximamente</string>
+    <string name="home_section_schedule">Calendario</string>
+    <string name="home_section_recommends">Recomendaciones</string>
+    <string name="home_section_collections">Colecciones</string>
+</resources>

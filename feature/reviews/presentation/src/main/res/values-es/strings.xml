@@ -1,0 +1,27 @@
+<resources>
+    <string name="reviews_auth_required">Inicia sesión para votar</string>
+    <string name="reviews_vote_error">No se pudo guardar el voto</string>
+    <string name="reviews_delete_error">No se eliminó la reseña</string>
+    <string name="review_comments">Comentarios (%1$s)</string>
+    <string name="reviews_title">Reseñas</string>
+    <string name="reviews_new">Nuevas</string>
+    <string name="reviews_old">Antiguas</string>
+    <string name="reviews_top">Mejores</string>
+    <string name="reviews_empty">Todavía no hay reseñas</string>
+    <string name="reviews_error">No se pudieron cargar las reseñas</string>
+    <string name="review_like">Me gusta</string>
+    <string name="review_dislike">No me gusta</string>
+    <string name="review_views">Visualizaciones: %1$s</string>
+    <string name="review_count_thousands">%1$sK</string>
+    <string name="review_count_millions">%1$sM</string>
+    <string name="review_details_title">Reseña</string>
+    <string name="review_anime_label">Título</string>
+    <string name="review_anime_open">Abrir título</string>
+    <string name="review_rating_title">Valoraciones</string>
+    <string name="review_reactions_title">¿Te resultó útil esta reseña?</string>
+    <string name="review_waiting">Pendiente de moderación</string>
+    <string name="review_declined">Rechazada</string>
+    <string name="review_approved">Publicada</string>
+    <string name="review_delete_confirm">¿Eliminar esta reseña?</string>
+    <string name="reviews_mobile_detail_placeholder">Selecciona una reseña para leerla aquí</string>
+</resources>

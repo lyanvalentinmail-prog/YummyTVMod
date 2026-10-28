@@ -242,6 +242,7 @@ fun YaniContentLanguage.label(): String = stringResource(
         YaniContentLanguage.RUSSIAN -> R.string.settings_content_language_russian
         YaniContentLanguage.ENGLISH -> R.string.settings_content_language_english
         YaniContentLanguage.UKRAINIAN -> R.string.settings_content_language_ukrainian
+        YaniContentLanguage.SPANISH -> R.string.settings_content_language_spanish
     },
 )
 

@@ -1,0 +1,28 @@
+<resources>
+    <string name="faq_title">Preguntas frecuentes del desarrollador</string>
+    <string name="faq_who_am_i_title">¿Quién es el desarrollador?</string>
+    <string name="faq_who_am_i_answer">Soy el desarrollador independiente detrás de YummyTV. Trabajo en la app en mi tiempo libre porque quiero que ver anime sea más cómodo y agradable.</string>
+    <string name="faq_why_this_app_title">¿Por qué la app es así?</string>
+    <string name="faq_why_this_app_answer">YummyTV refleja mi idea de una app cómoda para ver anime. Evoluciona poco a poco: pruebo ideas, veo cómo funcionan en el uso real y las voy mejorando.</string>
+    <string name="faq_why_not_all_cases_title">¿Por qué no puedo prever todos los casos?</string>
+    <string name="faq_why_not_all_cases_answer">Mi tiempo y mi acceso a dispositivos son muy limitados, así que no puedo probar de antemano todas las versiones de Android, modelos de dispositivos, fuentes de vídeo, redes y situaciones de uso. Además, no gano dinero con este trabajo y desarrollo la app íntegramente en mi tiempo libre.</string>
+    <string name="faq_why_errors_title">¿Por qué se producen errores?</string>
+    <string name="faq_why_errors_answer">La app depende de algo más que de su propio código. Las API externas, los reproductores, la disponibilidad de las fuentes, las restricciones de red y el comportamiento específico de cada dispositivo pueden cambiar o funcionar de forma distinta a la esperada. A veces también puede que simplemente haya pasado por alto alguna función o situación.</string>
+    <string name="faq_missing_site_feature_title">Echo en falta una función de la web, por ejemplo ABC</string>
+    <string name="faq_missing_site_feature_answer">La app se creó originalmente pensando en mis propias necesidades en una TV, donde muchas funciones de la web eran sencillamente innecesarias. Más tarde añadí la versión móvil, en la que técnicamente se podría recrear casi toda la funcionalidad de la web, pero no quiero añadir funciones sin una necesidad real. Si echas en falta algo, dímelo: estudiaré tu caso e intentaré añadir esa función.</string>
+    <string name="faq_unsupported_player_title">¿Por qué no es compatible el reproductor XYZ?</string>
+    <string name="faq_unsupported_player_answer">Lo más probable es que todavía no haya tenido tiempo de ocuparme de él. Si un reproductor no funciona o no es compatible, dime el título, el episodio y el nombre del reproductor. Intentaré investigarlo y añadir su compatibilidad.</string>
+    <string name="faq_external_player_title">¿Por qué no puedo usar un reproductor externo?</string>
+    <string name="faq_external_player_answer">Muchos proveedores de streaming no ofrecen un enlace directo sencillo al vídeo. La reproducción puede requerir cabeceras de solicitud específicas, cookies, tokens temporales y una sesión activa. Obtener y transmitir todo esto correctamente es difícil incluso dentro de la app, mientras que un reproductor externo normalmente desconoce estos requisitos y por eso no puede reproducir el vídeo.</string>
+    <string name="faq_not_official_title">¿Por qué es una app no oficial?</string>
+    <string name="faq_not_official_answer">No estoy vinculado a los propietarios del sitio web y desarrollo YummyTV de forma independiente, por lo que la app no es oficial. En el futuro, eso sí, sería estupendo establecer una colaboración y quizá convertirla en oficial algún día.</string>
+    <string name="faq_why_feedback_title">¿Por qué es importante vuestra opinión?</string>
+    <string name="faq_why_feedback_answer">Vuestros mensajes me ayudan a descubrir situaciones y errores que no puedo reproducir por mi cuenta. Cuanto más preciso sea el informe, más fácil será entender la causa y priorizar las mejoras que de verdad importan.</string>
+    <string name="faq_feedback_button">Preguntas/Ideas/Sugerencias</string>
+    <string name="faq_community_telegram_button">Comunidad de Telegram</string>
+    <string name="faq_open_telegram">Abrir Telegram</string>
+    <string name="faq_expand">Ampliar respuesta</string>
+    <string name="faq_collapse">Contraer respuesta</string>
+    <string name="faq_open_repository">Abrir GitHub</string>
+    <string name="faq_repository_url" translatable="false">https://github.com/Helandy/YummyTV</string>
+</resources>

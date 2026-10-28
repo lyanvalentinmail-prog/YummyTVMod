@@ -22,7 +22,7 @@ android {
 
         // Только языки приложения: строки библиотек (play-services, media3, appcompat) на остальных не нужны
         androidResources {
-            localeFilters += listOf("en", "ru", "uk")
+            localeFilters += listOf("en", "es", "uk")
         }
 
         buildConfigField("String", "APPMETRICA_API_KEY", buildConfigSecret("yummytv.appmetricaApiKey"))

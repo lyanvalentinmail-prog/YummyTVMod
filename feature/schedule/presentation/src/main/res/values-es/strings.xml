@@ -1,0 +1,17 @@
+<resources>
+    <string name="schedule_mobile_title">Calendario</string>
+    <string name="schedule_episode_aired">El episodio %1$d ya está disponible</string>
+    <string name="schedule_episode_future">El episodio %1$d se estrena en %2$s</string>
+    <string name="schedule_day_one">día</string>
+    <string name="schedule_day_few">días</string>
+    <string name="schedule_day_many">días</string>
+    <string name="schedule_hour_one">hora</string>
+    <string name="schedule_hour_few">horas</string>
+    <string name="schedule_hour_many">horas</string>
+    <string name="schedule_minute_one">minuto</string>
+    <string name="schedule_minute_few">minutos</string>
+    <string name="schedule_minute_many">minutos</string>
+    <string name="schedule_less_than_minute">menos de un minuto</string>
+    <string name="schedule_loading">Cargando calendario</string>
+    <string name="schedule_empty">El calendario está vacío</string>
+</resources>

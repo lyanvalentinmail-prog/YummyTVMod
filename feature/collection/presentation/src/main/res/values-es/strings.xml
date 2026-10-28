@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="collection_load_error">No se pudo cargar la colección</string>
+    <string name="collection_catalog_load_error">No se pudieron cargar las colecciones</string>
+    <string name="collection_vote_auth_required">Inicia sesión para valorar colecciones</string>
+    <string name="collection_vote_error">No se pudo valorar la colección</string>
+    <string name="collection_create_auth_required">Inicia sesión para crear una colección</string>
+    <string name="collection_create_error">No se pudo crear la colección</string>
+    <string name="collection_update_error">No se pudo actualizar la colección</string>
+    <string name="collection_delete_error">No se pudo eliminar la colección</string>
+    <string name="collection_comments">Comentarios</string>
+    <string name="collection_mobile_title">Colección</string>
+    <string name="collection_catalog_title">Colecciones</string>
+        <string name="collection_create_dialog_title">Nueva colección</string>
+    <string name="collection_title_label">Título</string>
+    <string name="collection_description_label">Descripción</string>
+    <string name="collection_public_label">Colección pública</string>
+    <string name="collection_create_confirm">Crear</string>
+    <string name="collection_edit">Editar</string>
+    <string name="collection_edit_dialog_title">Editar colección</string>
+    <string name="collection_save">Guardar</string>
+    <string name="collection_delete_dialog_title">¿Eliminar la colección?</string>
+    <string name="collection_delete_dialog_message">La colección se eliminará de forma permanente.</string>
+    <string name="collection_catalog_tv_empty">Todavía no hay colecciones</string>
+    <string name="collection_sort_new">Nuevas</string>
+    <string name="collection_sort_best">Populares</string>
+    <string name="collection_sort_old">Antiguas</string>
+    <string name="collection_description_more">Mostrar más</string>
+    <string name="collection_description_mobile_more">Más</string>
+    <string name="collection_description_less">Mostrar menos</string>
+</resources>

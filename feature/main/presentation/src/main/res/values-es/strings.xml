@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_mutation_error_toast">No se pudieron guardar los cambios. Comprueba tu conexión e inténtalo de nuevo.</string>
+    <string name="main_mobile_tab_profile">Perfil</string>
+    <string name="main_tab_home">Inicio</string>
+    <string name="main_tab_news">Noticias</string>
+    <string name="main_tab_library">Biblioteca</string>
+    <string name="main_tab_history">Historial</string>
+    <string name="main_tab_catalog">Catálogo</string>
+    <string name="main_tab_schedule">Calendario</string>
+    <string name="main_tab_collections">Colecciones</string>
+    <string name="main_settings_content_description">Ajustes</string>
+    <string name="main_account_content_description">Cuenta</string>
+</resources>
