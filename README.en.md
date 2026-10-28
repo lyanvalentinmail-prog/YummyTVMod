@@ -14,17 +14,17 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest">
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest">
     <img alt="Download APK" src="https://img.shields.io/badge/Download-APK-2ea44f?style=for-the-badge" />
   </a>
-  <a href="https://github.com/Helandy/YummyTV/releases/latest">
-    <img alt="Latest release" src="https://img.shields.io/github/v/release/Helandy/YummyTV?style=for-the-badge" />
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest">
+    <img alt="Latest release" src="https://img.shields.io/github/v/release/lyanvalentinmail-prog/YummyTVMod?style=for-the-badge" />
   </a>
-  <a href="https://github.com/Helandy/YummyTV/releases">
-    <img alt="Total downloads" src="https://img.shields.io/github/downloads/Helandy/YummyTV/total?style=for-the-badge" />
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases">
+    <img alt="Total downloads" src="https://img.shields.io/github/downloads/lyanvalentinmail-prog/YummyTVMod/total?style=for-the-badge" />
   </a>
-  <a href="https://github.com/Helandy/YummyTV/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Helandy/YummyTV?style=for-the-badge" />
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/lyanvalentinmail-prog/YummyTVMod?style=for-the-badge" />
   </a>
 </p>
 
@@ -44,7 +44,7 @@
 > [!IMPORTANT]
 > 💼 Open to work: [@Etozhesandy](https://t.me/Etozhesandy) (Android, Compose, Kotlin).
 > Please don't message there with app questions — use
-> [Issues](https://github.com/Helandy/YummyTV/issues) instead.
+> [Issues](https://github.com/lyanvalentinmail-prog/YummyTVMod/issues) instead.
 
 ## What is YummyTV?
 
@@ -60,7 +60,7 @@ On TV, the app is designed for remote control, D-pad navigation, and large UI el
 it supports bottom navigation, player gestures, and Picture-in-Picture.
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest"><b>Download APK</b></a>
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest"><b>Download APK</b></a>
   ·
   <a href="#screenshots"><b>Screenshots</b></a>
   ·
@@ -197,13 +197,23 @@ The built-in player is based on **Media3 / ExoPlayer** and supports:
 The latest version is available on **GitHub Releases**:
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest">
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest">
     <img alt="Download latest APK" src="https://img.shields.io/badge/Download%20latest%20APK-2ea44f?style=for-the-badge&logo=android&logoColor=white" />
   </a>
 </p>
 
 Download the APK, transfer it to your Android TV, set-top box, or Android device, and open the file
 to install it.
+
+You can also download it **without Releases**: open the **Actions** tab → **Release APK** workflow →
+latest run → **Artifacts** → `yummytv-apk-<version>`. Every build publishes the APK there and to the
+release automatically. See [docs/distribucion.md](docs/distribucion.md) for triggers, signing and
+versioning.
+
+> [!NOTE]
+> Without a release keystore configured, the published APK is a **debug** build (installable, with id
+> `su.afk.yummy.tv.debug`). See
+> [docs/distribucion.md](docs/distribucion.md#firma-del-apk) to produce a signed, updatable APK.
 
 ### How to install on Android TV
 
@@ -251,8 +261,8 @@ If you enjoy using the app and want to support its future development:
 You can also support the project for free:
 
 * ⭐ **Star the repository** — it helps others discover the project
-* 🐞 **Report bugs** via [Issues](https://github.com/Helandy/YummyTV/issues)
-* 💡 **Suggest improvements** via [Issues](https://github.com/Helandy/YummyTV/issues)
+* 🐞 **Report bugs** via [Issues](https://github.com/lyanvalentinmail-prog/YummyTVMod/issues)
+* 💡 **Suggest improvements** via [Issues](https://github.com/lyanvalentinmail-prog/YummyTVMod/issues)
 
 ---
 

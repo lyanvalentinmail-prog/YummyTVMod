@@ -14,17 +14,17 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest">
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest">
     <img alt="Download APK" src="https://img.shields.io/badge/Download-APK-2ea44f?style=for-the-badge" />
   </a>
-  <a href="https://github.com/Helandy/YummyTV/releases/latest">
-    <img alt="Latest release" src="https://img.shields.io/github/v/release/Helandy/YummyTV?style=for-the-badge" />
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest">
+    <img alt="Latest release" src="https://img.shields.io/github/v/release/lyanvalentinmail-prog/YummyTVMod?style=for-the-badge" />
   </a>
-  <a href="https://github.com/Helandy/YummyTV/releases">
-    <img alt="Total downloads" src="https://img.shields.io/github/downloads/Helandy/YummyTV/total?style=for-the-badge" />
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases">
+    <img alt="Total downloads" src="https://img.shields.io/github/downloads/lyanvalentinmail-prog/YummyTVMod/total?style=for-the-badge" />
   </a>
-  <a href="https://github.com/Helandy/YummyTV/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Helandy/YummyTV?style=for-the-badge" />
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/lyanvalentinmail-prog/YummyTVMod?style=for-the-badge" />
   </a>
 </p>
 
@@ -44,7 +44,7 @@
 > [!IMPORTANT]
 > 💼 En búsqueda de empleo: [@Etozhesandy](https://t.me/Etozhesandy) (Android, Compose, Kotlin).
 > No escribas ahí con dudas sobre la app; para eso están las
-> [Issues](https://github.com/Helandy/YummyTV/issues).
+> [Issues](https://github.com/lyanvalentinmail-prog/YummyTVMod/issues).
 
 ## ¿Qué es?
 
@@ -60,7 +60,7 @@ interfaz. En el móvil están disponibles la navegación inferior, los gestos en
 Picture-in-Picture.
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest"><b>Descargar APK</b></a>
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest"><b>Descargar APK</b></a>
   ·
   <a href="#capturas"><b>Capturas</b></a>
   ·
@@ -193,15 +193,25 @@ El reproductor integrado basado en **Media3 / ExoPlayer** permite:
 
 ## Descargar
 
-La última versión está disponible en **GitHub Releases**:
+La última versión está en **GitHub Releases** de este repositorio:
 
 <p align="center">
-  <a href="https://github.com/Helandy/YummyTV/releases/latest">
+  <a href="https://github.com/lyanvalentinmail-prog/YummyTVMod/releases/latest">
     <img alt="Download latest APK" src="https://img.shields.io/badge/Download%20latest%20APK-2ea44f?style=for-the-badge&logo=android&logoColor=white" />
   </a>
 </p>
 
-Descarga el APK, pásalo a tu Android TV, TV Box o dispositivo Android y abre el archivo para instalarlo.
+Descarga el asset `.apk`, pásalo a tu Android TV, TV Box o dispositivo Android y abre el archivo para instalarlo.
+
+También puedes descargarlo **sin usar Releases**: ve a la pestaña **Actions** → workflow
+**Release APK** → última ejecución → **Artifacts** → `yummytv-apk-<versión>`. Cada compilación
+publica el APK ahí y en el release de forma automática. Los detalles (disparadores, firma y
+versionado) están en [docs/distribucion.md](docs/distribucion.md).
+
+> [!NOTE]
+> Si el repositorio no tiene configurado un keystore de release, el APK publicado es una compilación
+> **debug** (instalable, con id `su.afk.yummy.tv.debug`). Para generar un APK firmado y actualizable,
+> sigue las instrucciones de [docs/distribucion.md](docs/distribucion.md#firma-del-apk).
 
 ### Cómo instalar en Android TV
 
@@ -250,8 +260,8 @@ Si te gusta la app y quieres ayudar a que siga creciendo:
 También puedes apoyar el proyecto gratis:
 
 * ⭐ **Dar una estrella al repositorio**: ayuda a que otros conozcan el proyecto
-* 🐞 **Informar de un error** mediante [Issues](https://github.com/Helandy/YummyTV/issues)
-* 💡 **Proponer una mejora** mediante [Issues](https://github.com/Helandy/YummyTV/issues)
+* 🐞 **Informar de un error** mediante [Issues](https://github.com/lyanvalentinmail-prog/YummyTVMod/issues)
+* 💡 **Proponer una mejora** mediante [Issues](https://github.com/lyanvalentinmail-prog/YummyTVMod/issues)
 
 ---
 
